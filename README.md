@@ -259,7 +259,28 @@ function test() {
 
 test();
 ```
-
+# test czy masz wystarczający wzrost
+```bash
+function test() {
+    // Miejsce na kod JS
+    const MINIMALNY_WZROST = 150;
+ 
+    let wzrost = prompt("Podaj swoj wzrost w centymetrach:");
+ 
+    if (isNaN(wzrost)) {
+        alert("Podaj poprawna wartosc liczbowa!");
+    } else {
+        if (wzrost >= MINIMALNY_WZROST) {
+            alert("Mozesz skorzystac z karuzeli!");
+        } else {
+            alert("Jestes za niski, zeby skorzystac z karuzeli.");
+        }
+    }
+}
+ 
+test();
+// <button onclick="test()">Kalkulator wzrostu</button> => HTML
+```
 
 
 
