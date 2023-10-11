@@ -1,9 +1,8 @@
 # js_averageGrades
 ```bash
-"use strict";
+
  
 function test() {
-    // Miejsce na kod JS
     const students = [
         {
             name: "Jan",
@@ -57,3 +56,20 @@ function test() {
  
 test();
 ```
+## alert, prompt
+```bash
+"use strict";
+
+// Miejsce na kod JS
+function greetUser() {
+  const name = prompt("Jak masz na imie?");
+
+
+if (name) {
+    alert(`Witaj ${name}! Milo Cie poznac.`);
+} else {
+    alert("Nie podales swojego imienia. Sprobuj jeszcze raz.");
+}
+}
+
+//  <button onclick="greetUser()">Kliknij, aby się przywitać</button>   =>HTML
