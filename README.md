@@ -149,6 +149,58 @@ function test() {
 
 test();
 ```
+# porównanie
+```bash
+
+
+function test() {
+    let name = null;
+    let surname;
+    
+    console.log(name == surname);
+    console.log(name === surname);
+}
+    
+    
+test();
+```
+# podatek Vat
+```bash
+
+
+function test() {
+    let basePrice = 50;
+    let vatRate = 0.23;
+    
+    let vatAmount = basePrice * vatRate;
+    
+    let totalPrice = basePrice + vatAmount;
+    
+    console.log("Bazowa cena:", basePrice);
+
+    console.log("Podatek VAT:", vatAmount);
+
+    console.log("Całkowita cena:", totalPrice);
+    
+     
+}
+
+test();
+```
+## Math.floor(), Math.ceil(), Math.round() 
+```bash
+function test() {
+    let number = 3.7;
+    let floorResult = Math.floor(number); // do najbliższej liczby całkowitej w DÓŁ
+    let ceilResult = Math.ceil(number);  //  do najbliższej liczby całkowitej w GÓRĘ
+    let roundResult = Math.round(number); // do najbliższej liczby całkowitej
+}
+test()
+```
+## isNaN / isFinite
+```bash
+
+
 
 
 
