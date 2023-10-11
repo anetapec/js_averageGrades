@@ -244,6 +244,23 @@ function test() {
 test();
 ```
 ## String - metody slice / substring / substr
+```bash
+
+
+function test() {
+     const sentence = "To jest przykladowe zdanie."
+     console.log(sentence);
+     let fragment1 = sentence.slice(2,10); // frgm zdania od 3 do 11
+     console.log(fragment1);
+     let fragment2 = sentence.substring(11,18); // frgm zdania od 12 do 19 
+     console.log(fragment2);
+     let fragment3 = sentence.substr(20,6); //  fragment zdania zaczynający się od 21 znaku i mający długość 6 znaków  
+     console.log(fragment2);
+     
+}
+
+test();
+```
 
 
 
