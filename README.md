@@ -296,6 +296,24 @@ function test() {
  
 test();
 ```
+# warunek ? wartość_jeśli_prawda : wartość_jeśli_fałsz - operator warunkowy trójargumentowy ?
+```bash
+function test() {
+ 
+    let age = 14;
+ 
+    let status = age >= 18 ? true : false;
+ 
+    if (status) {
+        console.log("Jestes pelnoletni!");
+    } else {
+        console.log("Nie jestes jeszcze pelnoletni.");
+    }
+}
+ 
+test();
+```
+
 
 
 
