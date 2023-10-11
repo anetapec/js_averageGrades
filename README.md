@@ -281,6 +281,21 @@ function test() {
 test();
 // <button onclick="test()">Kalkulator wzrostu</button> => HTML
 ```
+# if-else BOOLEAN
+```bash
+function test() {
+    // Miejsce na kod JS
+    const czyChceszPizze = true;
+ 
+    if (czyChceszPizze) {
+        console.log("Super, jedziemy po pizze!");
+    } else {
+        console.log("Okej, może nastepnym razem.");
+    }
+}
+ 
+test();
+```
 
 
 
