@@ -128,6 +128,28 @@ aktualizujWynik();
 // <button onclick="zmniejszLicznik()">Zmniejsz licznik</button>
 // <div id="wynik">0</div>
 ```
+# sprawdzenie czy uzytkownik spełnia warunki by prowadzić pojazd
+```bash
+
+
+function test() {
+    const minAge = 18;
+    
+    const age = parseInt(prompt("Podaj swoj wiek:"));
+    const hasLicense = prompt("Czy posiadasz prawo jazdy? (Tak/Nie)");
+    
+    if (age >= minAge && hasLicense.toLowerCase() === "tak") {
+        alert("Mozesz wypozyczyc samochod!");
+    } else {
+        alert("Nie mozesz wypozyczyc samochodu. Brak wymaganych dokumentow / niepelnoletni.")
+    }
+    
+
+}
+
+test();
+```
+
 
 
 
