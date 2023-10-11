@@ -73,3 +73,66 @@ if (name) {
 }
 
 //  <button onclick="greetUser()">Kliknij, aby się przywitać</button>   =>HTML
+```
+# confirm => zapytanie o pewność decyzji
+```bash
+function askConfirmation() {
+  const decisionConfirmed = confirm("Czy na pewno chcesz wykonać zakończyć?");
+  
+    if (decisionConfirmed) {
+        alert("Twoja decyzja została potwierdzona.");
+    } else {
+        alert("Twoja decyzja została anulowana.");
+    }
+}
+//  <button onclick="askConfirmation()">Kliknij, aby zadać pytanie</button> => HTML
+```
+# Bolean i Number
+```bash function test() {
+    let koszt = "25.50";
+    
+    let kosztLiczba =  Number(koszt);
+    let kosztAkcept = Boolean (kosztLiczba > 20);
+    
+    if (kosztAkcept) {
+        console.log("Zamowienie zaakceptowane");
+    } else {
+        console.log("Koszt zamowienia musi byc wiekszy niz 20 zl");
+    }
+}
+    
+
+
+test();
+```
+## 
+Inkrementacja / Dekrementacja => zwiększ/zmniejsz licznik
+
+```bash
+let licznik = 0;
+function zwiekszLicznik() {
+    licznik ++
+    aktualizujWynik();
+}
+function zmniejszLicznik() {
+  licznik--;
+  aktualizujWynik();
+}
+function aktualizujWynik() {
+  document.getElementById("wynik").textContent = licznik;
+}
+
+aktualizujWynik();
+
+//    <button onclick="zwiekszLicznik()">Zwiększ licznik</button>
+// <button onclick="zmniejszLicznik()">Zmniejsz licznik</button>
+// <div id="wynik">0</div>
+```
+
+
+
+
+
+
+
+
