@@ -58,9 +58,7 @@ test();
 ```
 ## alert, prompt
 ```bash
-"use strict";
 
-// Miejsce na kod JS
 function greetUser() {
   const name = prompt("Jak masz na imie?");
 
