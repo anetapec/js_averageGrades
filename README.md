@@ -199,6 +199,58 @@ test()
 ```
 ## isNaN / isFinite
 ```bash
+function test() {
+    function validateNumber(number) {
+        if (isNaN(number)) {
+            console.log("Podana wartosc nie jest liczba.");
+        } else if (!isFinite(number)) {
+            console.log("Podana liczba jest nieskonczona.");
+        } else {
+            console.log("Podana wartosc jest prawidlowa liczba.");
+        }
+    }
+ 
+    validateNumber(10); // Prawidlowa liczba
+    validateNumber("ABC"); // Nie jest liczba
+    validateNumber(Infinity); // Nieskonczonosc
+}
+ 
+test();
+```
+# OPERACJE NA STRINGACH  
+##  str - wyświetlenie długości zdania, pierwszej i ostatniej litery, sprawdzenie, czy zdanie zawiera określone słowo..- .includes !!!
+```bash
+
+
+
+function test() {
+     const sentence = "To jest przykladowe zdanie.";
+     console.log(`Dlugosc zdania: ${sentence.length}`);
+     console.log(`Pierwsza litera zdania: ${sentence[0]}`);
+     console.log(`Ostatnia litera zdania: ${sentence[sentence.length - 1]}`);
+     
+     const wordToCheck = "przykladowe";
+     // .includes !!!
+    console.log(`Czy zdanie zawiera slowo "${wordToCheck}"? ${sentence.includes(wordToCheck)}`);
+
+    // zmiana pierwszej litery zdania na małą 
+    
+    const modifiedSentence = sentence[0].toLowerCase() + sentence.slice(1);
+    console.log(`Zmodyfikowane zdanie: ${modifiedSentence}`);
+    // .slice => WYCINAMY FRGM TEKSTU OD DANEGO MIEJSCA
+
+}
+
+test();
+```
+## String - metody slice / substring / substr
+
+
+
+
+
+
+
 
 
 
