@@ -313,7 +313,43 @@ function test() {
  
 test();
 ```
+# .prompt(), parseInt(), operatory logiczne
+```bash
+function test() {
+   let year = parseInt(prompt("Wpisz rok "));
+   let isLeapYear = (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+   if (year >= 2001 && year <= 2100 && isLeapYear) {
+       alert(`${year} jest przestepny i nalezy do XXI wieku.`);
+    } else if (year >= 2001 && year <= 2100 && !isLeapYear) {
+        alert(`${year} nie jest przestepny i nalezy do XXI wieku.`);
+    } else {
+        alert(`${year} nie nalezy do XXI wieku.`);
+   }
+   
 
+}
+
+test();
+```
+## Operator koalescencji 
+```bash
+function test() {
+    
+    let price = 3200;
+    let isRegularCustomer = true;
+    let numberOfPurchases = 3;
+    let discount = isRegularCustomer
+        ? (numberOfPurchases ?? 0) >= 3
+            ? 10
+            : 0
+        : 0;
+    let totalPrice = price - (price * discount) / 100;
+ 
+    console.log(`Cena roweru: ${totalPrice} pln`);
+}
+ 
+test();
+```
 
 
 
