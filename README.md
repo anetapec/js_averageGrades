@@ -350,6 +350,28 @@ function test() {
  
 test();
 ```
+# kalkulator kalorii , while 
+```bash
+function test() {
+    
+ 
+    let sumaKalorii = 0;
+    let wprowadzoneKalorie;
+ 
+    while (wprowadzoneKalorie !== "stop") {
+        wprowadzoneKalorie = prompt(
+            "Podaj kalorycznosc kolejnego posilku (lub wpisz 'stop' by zakonczyc):"
+        );
+        if (wprowadzoneKalorie !== "stop") {
+            sumaKalorii += parseInt(wprowadzoneKalorie);
+        }
+    }
+ 
+    alert(`laczna liczba spozytych kalorii: ${sumaKalorii}`);
+}
+ 
+test();
+```
 
 
 
