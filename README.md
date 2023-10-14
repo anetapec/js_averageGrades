@@ -372,7 +372,7 @@ function test() {
  
 test();
 ```
-# zgadnij liczbę , do while
+# zgadnij liczbę ,while
 ```bash
 
             const szukanaLiczba = Math.floor(Math.random() * 10) + 1;
@@ -400,7 +400,7 @@ test();
                 alert("Przegrales(as)! Szukana liczba to: " + szukanaLiczba);
             }
 ```
-#kalkulator cen
+# kalkulator cen - do while;
 ```bash
 
 function test() {
@@ -419,6 +419,119 @@ function test() {
 
 test();
 ```
+# pepier kamień nożyce
+```bash
+ const opcje = ["kamien", "papier", "nozyce"];
+ 
+    alert(
+        'Witaj w grze Kamien, Papier, Nozyce! Rozpocznij gre lub wpisz "q", aby zakonczyc.'
+    );
+ 
+    do {
+        const wyborUzytkownika = prompt(
+            'Wybierz: kamien, papier, nozyce (lub "q" aby zakonczyc):'
+        );
+ 
+        if (wyborUzytkownika === "q") {
+            alert("Dziekujemy za gre. Do widzenia!");
+            break;
+        }
+ 
+        const losowyIndeks = Math.floor(Math.random() * opcje.length);
+        const wyborKomputera = opcje[losowyIndeks];
+ 
+        if (wyborUzytkownika === wyborKomputera) {
+            alert("Remis! Wybraliscie obie strony " + wyborUzytkownika + ".");
+        } else if (
+            (wyborUzytkownika === "kamien" && wyborKomputera === "nozyce") ||
+            (wyborUzytkownika === "papier" && wyborKomputera === "kamien") ||
+            (wyborUzytkownika === "nozyce" && wyborKomputera === "papier")
+        ) {
+            alert(
+                "Gratulacje! Wygrales! Twoj " +
+                    wyborUzytkownika +
+                    " pokonuje " +
+                    wyborKomputera +
+                    "."
+            );
+        } else {
+            alert(
+                "Przegrales! Twoj " +
+                    wyborUzytkownika +
+                    " jest pokonany przez " +
+                    wyborKomputera +
+                    "."
+            );
+        }
+    } while (true);
+```
+# zlczenie ile liter ma kazde słowo w zdaniu - pętla for 
+```bash
+function policzDlugoscSlowa(zdanie) {
+    const slowa = zdanie.split(" ");
+    const dlugosci = [];
+ 
+    for (let i = 0; i < slowa.length; i++) {
+        const dlugosc = slowa[i].length;
+        dlugosci.push(dlugosc);
+    }
+ 
+    return dlugosci;
+}
+ 
+const zdanie = "To jest przykladowe zdanie do analizy";
+const dlugosciSlow = policzDlugoscSlowa(zdanie);
+ 
+console.log("Dlugosci slow w zdaniu:", dlugosciSlow);
+```
+# wyliczenie średniej temperatury , pętla for
+```bash
+function test() {
+    
+    const temperatures = [25, 30, 28, 22, 27];
+    let sum = 0;
+ 
+    for (let i = 0; i < temperatures.length; i++) {
+        sum += temperatures[i];
+    }
+ 
+    const average = sum / temperatures.length;
+    console.log("Srednia temperatura wynosi: " + average);
+}
+ 
+test();
+```
+# znajdz perwszą liczę pierwszą w tablicy liczb 
+```bash
+function test() {
+    // Miejsce na kod JS
+    const numbers = [10, 7, 4, 12, 11, 20, 9, 13];
+ 
+    function isPrime(number) {
+        if (number < 2) {
+            return false;
+        }
+ 
+        for (let i = 2; i < number; i++) {
+            if (number % i === 0) {
+                return false;
+            }
+        }
+ 
+        return true;
+    }
+ 
+    for (let i = 0; i < numbers.length; i++) {
+        if (isPrime(numbers[i])) {
+            console.log("Pierwsza liczba znaleziona: " + numbers[i]);
+            break;
+        }
+    }
+}
+ 
+test();
+```
+
 
 
 
