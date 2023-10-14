@@ -372,7 +372,53 @@ function test() {
  
 test();
 ```
+# zgadnij liczbę , do while
+```bash
 
+            const szukanaLiczba = Math.floor(Math.random() * 10) + 1;
+             
+            alert("Witaj w loterii! Zgadnij liczbe od 1 do 10. Masz 5 prob.");
+             
+            let liczbaProb = 5;
+             
+            while (liczbaProb > 0) {
+                const zgadywanaLiczba = parseInt(prompt("Podaj liczbe:"));
+             
+                if (zgadywanaLiczba == szukanaLiczba) {
+                    alert("Gratulacje! Zgadles(as)!");
+                    break;
+                } else if (zgadywanaLiczba < szukanaLiczba) {
+                    alert("Podana liczba jest za mala. Sprobuj ponownie.");
+                } else {
+                    alert("Podana liczba jest za duza. Sprobuj ponownie.");
+                }
+             
+                liczbaProb--;
+            }
+             
+            if (liczbaProb === 0) {
+                alert("Przegrales(as)! Szukana liczba to: " + szukanaLiczba);
+            }
+```
+#kalkulator cen
+```bash
+
+function test() {
+    let suma = 0;
+    let cena;
+    do {
+         cena = parseFloat(prompt("Podaj cene: (wpisz 0, by zakończyć"));
+        suma += cena;
+    } while (cena !== 0);
+    alert("Łączna wartość produktów wynosi:" + suma.toFixed(2));
+    
+    
+    
+}
+
+
+test();
+```
 
 
 
