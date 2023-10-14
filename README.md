@@ -531,7 +531,57 @@ function test() {
  
 test();
 ```
-
+# obliczenie średniej ocen 
+```bash
+function test() {
+    // Miejsce na kod JS
+    const grades = [3, 4, 5, 2, 3, 5, 4, 2, 4, 5];
+    let sum = 0;
+    let count = 0;
+ 
+    for (let i = 0; i < grades.length; i++) {
+        if (grades[i] < 3) {
+            continue;
+        }
+ 
+        sum += grades[i];
+        count++;
+    }
+ 
+    const average = sum / count;
+    console.log(
+        "Srednia ocen (bez ocen niedostatecznych): " + average.toFixed(2)
+    );
+}
+ 
+test();
+```
+# obliczenie kosztu wysyłki w żależności od formy dostawy - switch
+```bash
+function test() {
+    // Miejsce na kod JS
+    const deliveryMethod = "kurier";
+    let cost = 0;
+ 
+    switch (deliveryMethod) {
+        case "kurier":
+            cost = 15;
+            break;
+        case "poczta":
+            cost = 10;
+            break;
+        case "odbior osobisty":
+            cost = 0;
+            break;
+        default:
+            console.log("Nieznana metoda dostawy.");
+    }
+ 
+    console.log("Koszt wysylki: " + cost + " pln");
+}
+ 
+test();
+```
 
 
 
