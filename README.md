@@ -869,6 +869,78 @@ function test() {
 
 test();
 ```
+# Klonowanie obiektów - Object.assign()
+```bash
+
+
+function test() {
+    let person = {
+        name: "John Doe",
+        age: 30,
+        address: {
+            street: "Main Street",
+            city: "City",
+            country: "Country",
+         },
+    };
+    
+    const cloneObject = (source, target) => {
+        Object.assign(target, source);
+    };
+    const clonedPerson = {};
+    
+    cloneObject(person, clonedPerson);
+    
+    person.name = "Jane Smith";
+    person.age = 25;
+    person.address.city = "New City"
+    
+    console.log("Original person:", person);
+    console.log("Cloned person:", clonedPerson);
+    
+}
+
+test();
+```
+# for...in - iterowanie po właściwościach obiektu
+```bash
+
+
+function test() {
+    const bookCollection = {
+        book1: {
+            author: 'Autor 1',
+            year: 2000,
+        },
+        book2: {
+            author: 'Autor 2',
+            year: 2005,
+        },
+        book3: {
+            author: 'Autor 3',
+            year: 2010,
+        },
+    };
+    
+    function iterateBookCollection(bookCollection) {
+        for (const bookName in bookCollection) {
+            const bookDetails = bookCollection[bookName];
+            console.log(`Ksiazka: ${bookName}`);
+            console.log(`Autor: ${bookDetails.author}`);
+            console.log(`Rok wydania: ${bookDetails.year}`);
+        }
+    }
+    
+    iterateBookCollection(bookCollection);
+}
+
+test();
+```
+#  for...of iterowanie przez elementy tablicy 
+
+```bash
+
+
 
 
 
