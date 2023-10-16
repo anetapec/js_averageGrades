@@ -708,8 +708,77 @@ test();
 ```
 # Funkcja strzałkowa z parametrami i wartościami domyślnymi
 ```bash
-
-
+function test() {
+    
+    const calculateBankFee = (kwota, typTransakcji, oprocentowanie = 0.05) => {
+        let oplata = 0;
+ 
+        if (typTransakcji === "przelew") {
+            oplata += 1.5;
+        } else if (typTransakcji === "wplata") {
+            oplata += 0.5;
+        }
+ 
+        oplata += kwota * oprocentowanie;
+ 
+        return oplata;
+    };
+ 
+    // Przykladowe użycie funkcji
+    let kwotaTransakcji = 1000;
+    let typ = "przelew";
+    let oplataBankowa = calculateBankFee(kwotaTransakcji, typ);
+ 
+    console.log(`Oplata bankowa: ${oplataBankowa}`);
+}
+ 
+test();
+```
+# Funkcja strzałkowa z funkcją zwrotną - FILTROWANIE LISTY PRODUKTÓW NA PODSTAWIE OKREŚLONYCH KRYTERIÓW
+```bash
+function test() {
+    // Miejsce na kod JS
+    const products = [
+        { name: "Koszula", price: 49.99 },
+        { name: "Spodnie", price: 79.99 },
+        { name: "Buty", price: 129.99 },
+        { name: "Kurtka", price: 149.99 },
+    ];
+ 
+    const filterProducts = (filterFunction) => {
+        const filteredProducts = products.filter(filterFunction);
+        return filteredProducts;
+    };
+ 
+    const filteredProducts = filterProducts((product) => product.price < 100);
+    console.log(filteredProducts[0].name + ": " + filteredProducts[0].price);
+    console.log(filteredProducts[1].name + ": " + filteredProducts[1].price);
+}
+ 
+test();
+```
+# this & new
+```bash
+function test() {
+    
+ 
+    function Person() {
+        const self = this;
+ 
+        self.name = "";
+ 
+        self.setName = function (name) {
+            self.name = name;
+        };
+    }
+ 
+    const person = new Person();
+    person.setName("John");
+    console.log(person.name);
+}
+ 
+test();
+```
 
 
 
