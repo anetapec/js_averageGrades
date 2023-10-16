@@ -779,6 +779,48 @@ function test() {
  
 test();
 ```
+# prototype, funkcja konstruktora , zadania 
+```bash
+
+
+function test() {
+    function Task(title, description) {
+        this.title = title;
+        this.description = description;
+    }
+    
+    
+    // definuje metodę raz i udostępnienia ją dla wszystkich instancji obiektu Task
+    Task.prototype.printTask = function () {
+        console.log(`Zadanie: ${this.title}`);
+        console.log(`Opis: ${this.description}`);
+    };
+    const task1 = new Task("Zakupy spozywcze", "Kupic jajka, mleko i chleb");
+}
+
+task1.printTask();
+
+test();
+
+```
+# inicjalizator obiektów, zarządzanie zamówieniami
+```bash
+function test() {
+    const Order = (id, product, quantity) => ({
+        id,
+        product,
+        quantity,
+    });
+    const order1 = Order(1, "Koszula", 2);
+    console.log(`Id zamowienia: ${order1.id}`);
+    console.log(`Produkt: ${order1.product}`);
+    console.log(`Ilosc: ${order1.quantity}`);
+}
+
+test();
+```
+# Object.create()
+```bash
 
 
 
