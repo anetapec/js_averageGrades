@@ -637,6 +637,77 @@ function test() {
 
 test();
 ```
+# oblicz średnia ocen
+
+```bash
+
+
+
+function test() {
+    const oceny = [4, 3.5, 5, 4.5, 3, 4];
+    const obliczSrednia = function(oceny) {
+        let suma = 0;
+        for(let i = 0; i< oceny.length; i++) {
+        suma += oceny[i];
+    }
+    const srednia = suma / oceny.length;
+    return srednia;
+    
+};
+const wynik = obliczSrednia(oceny);
+console.log(`Srednia wartosc ocen: ${wynik}`);
+
+}
+
+test();
+```
+# Funkcja zwrotna (callback) - przetwarzanie danych bez interakcji z użytkownikiem.
+```bash
+
+
+function test() {
+    
+    function calculateAverageTemperature(temperatureData, callback) {
+        const sum = temperatureData.reduce(
+            (total, temperature) => total + temperature,
+            0
+        );
+        const average = sum / temperatureData.length;
+        callback(average);
+    }
+ 
+    const temperatureData = [23, 24, 22, 25, 21];
+ 
+    function displayAverageTemperature(average) {
+        console.log(`Srednia temperatura: ${average}`);
+    }
+ 
+    calculateAverageTemperature(temperatureData, displayAverageTemperature);
+}
+ 
+test();
+```
+# obliczenie sumy liczb za pomocą funkcji strzałkowej
+```bash
+function test() {
+   
+    const calculateSum = (array) => {
+        let sum = 0;
+        array.forEach((number) => {
+            sum += number;
+        });
+        return sum;
+    };
+ 
+    const numbers = [1, 2, 3, 4, 5];
+    const result = calculateSum(numbers);
+    console.log(result);
+}
+ 
+test();
+```
+# Funkcja strzałkowa z parametrami i wartościami domyślnymi
+```bash
 
 
 
