@@ -582,7 +582,61 @@ function test() {
  
 test();
 ```
+# greeting in different languages
+```bash
+const languageCode = "en";
+        function greet() {
+          switch (languageCode) {
+            case "en":
+              console.log("Hello!");
+              break;
+            case "es":
+              console.log("¡Hola!");
+              break;
+            case "fr":
+              console.log("Bonjour !");
+              break;
+            default:
+              console.log("Unsupported language.");
+          }
+        }
+        
+    
+greet();
+```
+# kalkulate BMI 
+```bash
+ 
+    function test() {
+        function calculateBMI(height, weight) {
+            const heightInMeters = height / 100; // Konwersja wzrostu z cm na metry
+            const bmi = weight / (heightInMeters * heightInMeters);
+            return bmi;
+        }
+     
+        const height = 180; // Wzrost w cm
+        const weight = 75; // Waga w kg
+     
+        const bmiResult = calculateBMI(height, weight);
+        console.log("Twoj wskaznik BMI wynosi: " + bmiResult.toFixed(2));
+    }
+     
+    test();
+```
+# calculate Tax
+```bash
+function test() {
+    function calculateTax(value, taxRate = 0.23) {
+    const tax = value * taxRate;
+    return tax;
+    }
+    
+    console.log(calculateTax(100));
+    console.log(calculateTax(100, 0.15));
+}
 
+test();
+```
 
 
 
