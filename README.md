@@ -823,6 +823,55 @@ test();
 ```bash
 
 
+function test() {
+    const userPrototype = {
+        introduce() {
+        console.log(`Hi, my name is ${this.name}. I am ${this.age} years old.`);
+        },
+    };
+    
+    function createUser(name, age) {
+        const user = Object.create(userPrototype);
+        user.name = name;
+        user.age = age;
+        return user;
+    }
+    const user1 = createUser("John", 25);
+    user1.introduce();
+}
+
+test();
+```
+# Dostęp do właściwości obiektu , modyfikowanie właściwości obiektu
+```bash
+
+
+function test() {
+    const products = [
+        { name: "Product 1", price: 10.99, quantity: 50 },
+        { name: "Product 2", price: 5.99, quantity: 20 },
+        { name: "Product 3", price: 15.99, quantity: 10 },
+    ];
+    
+    products.forEach((product) => {
+        console.log("Product name:", product.name);
+        console.log("Price:", product.price);
+        console.log("Quantity:", product.quantity);
+    });
+    
+    const product2 = products.find((product) => product.name === "Product 2");
+    console.log("Price of Product 2:", product2.price);
+    
+     const product3 = products.find((product) => product.name === "Product 3");
+     product3.quantity += 5;
+     console.log("New quantity of Product 3:", product3.quantity);
+}
+
+test();
+```
+
+
+
 
 
 
