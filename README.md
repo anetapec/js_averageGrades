@@ -937,8 +937,65 @@ function test() {
 test();
 ```
 #  for...of iterowanie przez elementy tablicy 
+#  aplikacaę do zarządzania listą zadań, gdzie będzie się iterować przez zadania i wykonywać różne operacje na nich.
 
 ```bash
+
+
+function test() {
+    const tasks = [
+        { name: 'Zakupy spozywcze', completed: false },
+        { name: 'Sprzatanie mieszkania', completed: true },
+        { name: 'Nauka JavaScript', completed: false }
+    ];
+    
+            function manageTasks(tasks) {
+                for (const task of tasks) {
+                    console.log(`Zadanie: ${task.name}`);
+                    console.log(`Czy wykonane: ${task.completed ? 'Tak' : 'Nie'}`);
+            
+            }
+            
+           
+          
+        }
+         manageTasks(tasks);
+}
+
+test();
+
+```
+#  Symulacja aplikacji do zarządzania playlistą muzyczną. Tworzenie obiektu playlisty, który będzie zawierał funkcje do dodawania utworów, wyświetlania listy utworów oraz odtwarzania aktualnego utworu.
+```bash
+function test() {
+    
+    const playlist = {
+        currentSongIndex: 0,
+        songs: [],
+        addSong(name) {
+            this.songs.push(name);
+        },
+        showPlaylist() {
+            for (const song of this.songs) {
+                console.log(song);
+            }
+        },
+        playCurrentSong() {
+            const currentSong = this.songs[this.currentSongIndex];
+            console.log(`Odtwarzam: ${currentSong}`);
+        },
+    };
+ 
+    playlist.addSong("NF - HOPE");
+    playlist.addSong("Perfect - Autobiografia");
+    playlist.addSong("Imagine Dragons - Wrecked");
+ 
+    playlist.showPlaylist();
+    playlist.playCurrentSong();
+}
+ 
+test();
+
 
 
 
